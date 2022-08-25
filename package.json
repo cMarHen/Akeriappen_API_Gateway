@@ -1,0 +1,38 @@
+{
+  "name": "akeriappen_api_gateway",
+  "version": "1.0.0",
+  "description": "A gateway for API:s used by Akeriappen.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "npx --node-options=--experimental-vm-modules jest || exit 0",
+    "dev": "nodemon --inspect -r dotenv/config src/server.js",
+    "lint": "npx eslint ./src || exit 0",
+    "lint:fix": "npx eslint ./src --fix || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cMarHen/Akeriappen_API_Gateway.git"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "Martin Henriksson",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "firebase-admin": "^10.0.2",
+    "helmet": "^5.0.2",
+    "http-errors": "^2.0.0",
+    "jest": "^28.1.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.2.3",
+    "supertest": "^6.2.3"
+  },
+  "devDependencies": {
+    "@lnu/eslint-config": "^1.1.4",
+    "dotenv": "^14.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
